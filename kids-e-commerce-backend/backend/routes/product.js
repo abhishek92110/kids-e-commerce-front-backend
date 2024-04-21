@@ -129,7 +129,7 @@ router.get('/fetchalluserproduct',fetchuser, async (req,res)=>
 {
 
     try{
-   const productCart  = await ProductCart.find({user:req.user.id})
+   const productCart  = await ProductCart.find({})
    
    res.json({"success":true, productCart:productCart});
     }
