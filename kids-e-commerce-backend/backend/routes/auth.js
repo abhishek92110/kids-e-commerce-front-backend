@@ -140,7 +140,7 @@ router.post(
   });
 
 
-  router.get("/getuser", async (req, res) => {
+  router.get("/getalluser", async (req, res) => {
  
     try {
       const user = await User.find({});
