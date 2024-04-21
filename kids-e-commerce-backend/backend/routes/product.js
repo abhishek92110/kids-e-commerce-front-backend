@@ -125,7 +125,7 @@ router.post(
 
 //ROUTE-3 fetch all product data correspond to user using get
 
-router.get('/fetchalluserproduct',fetchuser, async (req,res)=>
+router.get('/fetchalluserproduct', async (req,res)=>
 {
 
     try{
