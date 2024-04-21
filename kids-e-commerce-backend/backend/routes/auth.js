@@ -140,6 +140,20 @@ router.post(
   });
 
 
+  router.get("/getuser", async (req, res) => {
+ 
+    try {
+      const user = await User.find({});
+      res.send({"success":true,"user":user});
+    } 
+    catch (error) { 
+      console.error(error.message);
+      res.status(500).send({"error":"some error occured"});
+      res.json({error:error.message});
+    }
+  });
+
+
   // ROUTE-3 post user address correspond to logged in user using post. login required
 
   router.post("/adduseraddress", fetchuser, async(req, res)=>{
